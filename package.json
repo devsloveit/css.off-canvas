@@ -1,0 +1,23 @@
+{
+    "name": "devs-css.off-canvas",
+    "description": "devslove.it css.off-canvas",
+    "authors": [
+        {
+            "name": "AJ",
+            "email": "aj@devslove.it"
+        }
+    ],
+    "readme": "README.md",
+    "dependencies": {
+
+    },
+    "devDependencies": {
+        "grunt": "^0.4.5",
+        "grunt-cli": "^0.1.13",
+        "grunt-contrib-cssmin": "^0.14.0",
+        "grunt-contrib-watch": "^1.0.0",
+        "grunt-sass": "^1.2.0",
+        "autoprefixer": "~6.3.7",
+        "grunt-postcss": "~0.8.0"
+    }
+}
