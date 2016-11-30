@@ -8,6 +8,10 @@
             "email": "aj@devslove.it"
         }
     ],
+    "repository" : {
+        "type" : "git",
+        "url" : "https://github.com/devsloveit/css.off-canvas.git"
+    },
     "readme": "README.md",
     "dependencies": {
 
