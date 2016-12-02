@@ -1,0 +1,89 @@
+.devsloveit-off-canvas-wrapper input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.devsloveit-off-canvas-wrapper input[type="checkbox"]:checked ~ .devsloveit-off-canvas {
+  overflow-y: auto;
+  overflow-x: hidden;
+  opacity: 1;
+  -webkit-transform: translate(0, 0) translate3d(0, 0, 0);
+          transform: translate(0, 0) translate3d(0, 0, 0);
+}
+
+.devsloveit-off-canvas-wrapper input[type="checkbox"]:checked ~ .devsloveit-off-canvas-helper {
+  opacity: 1;
+  visibility: visible;
+}
+
+.devsloveit-off-canvas-wrapper input[type="checkbox"]:focus ~ .devsloveit-off-canvas, .devsloveit-off-canvas-wrapper input[type="checkbox"]:active ~ .devsloveit-off-canvas {
+  -webkit-transition: opacity 0.25s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.25s ease, -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.25s ease;
+  transition: transform 0.5s ease, opacity 0.25s ease, -webkit-transform 0.5s ease;
+}
+
+.devsloveit-off-canvas-wrapper input[type="checkbox"]:focus ~ .devsloveit-off-canvas-helper, .devsloveit-off-canvas-wrapper input[type="checkbox"]:active ~ .devsloveit-off-canvas-helper {
+  -webkit-transition: opacity 0.25s ease, visibility 0.25s ease;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.devsloveit-off-canvas-helper {
+  background-color: red;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.devsloveit-off-canvas {
+  background-color: blue;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.devsloveit-off-canvas[data-comes-from="top"] {
+  top: 0;
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  -webkit-transform: translate(0, -100%) translate3d(0, -100%, 0);
+          transform: translate(0, -100%) translate3d(0, -100%, 0);
+}
+
+.devsloveit-off-canvas[data-comes-from="bottom"] {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  -webkit-transform: translate(0, 100%) translate3d(0, 100%, 0);
+          transform: translate(0, 100%) translate3d(0, 100%, 0);
+}
+
+.devsloveit-off-canvas[data-comes-from="left"] {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 300px;
+  -webkit-transform: translate(-100%, 0) translate3d(-100%, 0, 0);
+          transform: translate(-100%, 0) translate3d(-100%, 0, 0);
+}
+
+.devsloveit-off-canvas[data-comes-from="right"] {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 300px;
+  -webkit-transform: translate(100%, 0) translate3d(100%, 0, 0);
+          transform: translate(100%, 0) translate3d(100%, 0, 0);
+}
