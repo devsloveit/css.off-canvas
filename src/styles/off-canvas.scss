@@ -38,9 +38,6 @@
 
 // Helper
 .#{$devs-love-it}-helper {
-	background: {
-		color: $devsloveit-off-canvas-helper-background;
-	}
 	position: fixed;
 	z: {
 		index: $devsloveit-off-canvas-index - 1;
@@ -56,9 +53,6 @@
 
 // Nav
 .#{$devs-love-it} {
-	background: {
-		color: $devsloveit-off-canvas-background;
-	}
 	position: fixed;
 	z: {
 		index: $devsloveit-off-canvas-index;
@@ -67,41 +61,28 @@
 	width: 100%;
 	opacity: 0;
 	transition: transform 0.5s ease, opacity 0.25s ease;
-
 	&[data-comes-from="top"] {
 		top: 0;
 		left: 0;
 		right: 0;
-		max: {
-			height: $devsloveit-off-canvas-max-height;
-		}
 		transform: translate(0, -100%) translate3d(0, -100%, 0);
 	}
 	&[data-comes-from="bottom"] {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		max: {
-			height: $devsloveit-off-canvas-max-height;
-		}
 		transform: translate(0, 100%) translate3d(0, 100%, 0);
 	}
 	&[data-comes-from="left"] {
 		top: 0;
 		bottom: 0;
 		left: 0;
-		max: {
-			width: $devsloveit-off-canvas-max-width;
-		}
 		transform: translate(-100%, 0) translate3d(-100%, 0, 0);
 	}
 	&[data-comes-from="right"] {
 		top: 0;
 		bottom: 0;
 		right: 0;
-		max: {
-			width: $devsloveit-off-canvas-max-width;
-		}
 		transform: translate(100%, 0) translate3d(100%, 0, 0);
 	}
 }
