@@ -86,19 +86,3 @@
 		transform: translate(100%, 0) translate3d(100%, 0, 0);
 	}
 }
-
-.example {
-	.#{$devs-love-it} {
-		max: {
-			width: 320px;
-		}
-		background: {
-			color: red;
-		}
-	}
-	.#{$devs-love-it}-helper {
-		background: {
-			color: black;
-		}
-	}
-}

@@ -1,6 +1,6 @@
 {
   "name": "devsloveit-css.off-canvas",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "devslove.it - Pure CSS off-canvas menu",
   "authors": [
     {
@@ -20,6 +20,7 @@
     "grunt-cli": "^0.1.13",
     "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^1.0.1",
     "grunt-postcss": "~0.8.0",
     "grunt-sass": "^1.2.0"
   }

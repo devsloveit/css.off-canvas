@@ -59,11 +59,16 @@ module.exports = function (grunt) {
                 tagMessage: 'Version %VERSION%',
                 pushTo: 'origin'
             }
+        },
+        exec: {
+            npm: 'npm publish'
         }
     });
 
     // Load tasks
     grunt.loadNpmTasks('grunt-bump');
+    grunt.loadNpmTasks('grunt-exec');
+
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -72,4 +77,5 @@ module.exports = function (grunt) {
     // Default task(s).
     grunt.registerTask('default', ['sass', 'postcss', 'cssmin']);
     grunt.registerTask('dist', ['sass:dist', 'postcss:dist', 'cssmin:dist']);
+    grunt.registerTask('release', ['dist', 'bump', 'exec']);
 };
