@@ -50,10 +50,19 @@ module.exports = function (grunt) {
                     ext: '.min.css'
                 }]
             }
+        },
+        bump: {
+            options: {
+                commitFiles: ['-a'],
+                createTag: true,
+                tagName: '%VERSION%',
+                tagMessage: 'Version %VERSION%'
+            }
         }
     });
 
     // Load tasks
+    grunt.loadNpmTasks('grunt-bump');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -61,4 +70,5 @@ module.exports = function (grunt) {
 
     // Default task(s).
     grunt.registerTask('default', ['sass', 'postcss', 'cssmin']);
+    grunt.registerTask('dist', ['sass:dist', 'postcss:dist', 'cssmin:dist']);
 };

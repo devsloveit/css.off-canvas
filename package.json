@@ -1,7 +1,7 @@
 {
   "name": "devsloveit-css.off-canvas",
-  "version": "0.1.7",
-  "description": "devslove.it css.off-canvas",
+  "version": "0.1.8",
+  "description": "devslove.it - Pure CSS off-canvas menu",
   "authors": [
     {
       "name": "AJ",
@@ -12,16 +12,15 @@
     "type": "git",
     "url": "https://github.com/devsloveit/css.off-canvas.git"
   },
-  "readme": "README.md",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "~6.3.7",
     "grunt": "^0.4.5",
+    "grunt-bump": "^0.8.0",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-postcss": "~0.8.0",
-    "grunt-release": "^0.14.0",
     "grunt-sass": "^1.2.0"
   }
 }
