@@ -67,3 +67,30 @@
   opacity: 0;
   visibility: hidden;
 }
+
+.d-off-canvas {
+  max-width: 320px;
+  background-color: red;
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.d-off-canvas-wrapper input[type="checkbox"]:focus ~ .d-off-canvas, .d-off-canvas-wrapper input[type="checkbox"]:active ~ .d-off-canvas {
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.d-off-canvas-wrapper input[type="checkbox"]:focus ~ .d-off-canvas-helper, .d-off-canvas-wrapper input[type="checkbox"]:active ~ .d-off-canvas-helper {
+  -webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.d-off-canvas-helper {
+  background-color: black;
+  -webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
