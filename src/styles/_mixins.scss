@@ -68,7 +68,7 @@
 	$transition-time: $devsloveit-off-canvas-transition-time,
 	$transition-type: $devsloveit-off-canvas-transition-type
 ) {
-	@include devsloveit-off-canvas($background-color, $helper-background-color, $max-height, $max-width, $transition-time, $transition-type);
+	@include devsloveit-off-canvas($background-color, $max-height, $max-width, $transition-time, $transition-type);
 	@include devsloveit-off-canvas-wrapper($transition-time, $transition-type);
 	@include devsloveit-off-canvas-helper($helper-background-color, $transition-time, $transition-type);
 }
