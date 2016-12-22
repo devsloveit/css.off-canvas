@@ -20,19 +20,23 @@ We don't need JavaScript ;-)
 
 #### Mixins
 `@include devsloveit-off-canvas();`
+
 Creates your content container (which holds your content).
 _You can't use `$helper-background-color` option here._
 
 `@include devsloveit-off-canvas-helper();`
+
 Creates your helper for removing off-canvas.
 _You can only use `$helper-background-color` and transition options here._
 
 
 `@include devsloveit-off-canvas-wrapper();`
+
 Creates your wrapper (which holds all elements).
 _You can only use transition options here._
 
 `@include devsloveit-off-canvas-styles();`
+
 Combines all mixins (only include once - then use single mixins).
 
 ##### Options
