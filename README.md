@@ -19,7 +19,21 @@ We don't need JavaScript ;-)
 ### SCSS
 
 #### Mixins
+`@include devsloveit-off-canvas();`
+Creates your content container (which holds your content).
+_You can't use `$helper-background-color` option here._
+
+`@include devsloveit-off-canvas-helper();`
+Creates your helper for removing off-canvas.
+_You can only use `$helper-background-color` and transition options here._
+
+
+`@include devsloveit-off-canvas-wrapper();`
+Creates your wrapper (which holds all elements).
+_You can only use transition options here._
+
 `@include devsloveit-off-canvas-styles();`
+Combines all mixins (only include once - then use single mixins).
 
 ##### Options
 | Option  | Default | Description |
@@ -30,3 +44,19 @@ We don't need JavaScript ;-)
 | $max-width | false | Should be defined for _left_ or _right_ uses. |
 | $transition-time | $devsloveit-off-canvas-transition-time | Is defined in main settings. Can be overwritten by setting a new value to the variable. |
 | $transition-type | $devsloveit-off-canvas-transition-type | Is defined in main settings. Can be overwritten by setting a new value to the variable. |
+
+### Example
+```scss
+@include devsloveit-off-canvas(red, $max-width: 320px);
+@include devsloveit-off-canvas-helper(blue);
+@include devsloveit-off-canvas-wrapper();
+```
+
+For additional cases
+
+```scss
+.example {
+	@include devsloveit-off-canvas($max-width: 500px);
+	@include devsloveit-off-canvas-helper(green);
+}
+```
