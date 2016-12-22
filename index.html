@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>css.off-canvas</title>
     <link rel="stylesheet" href="dist/styles/off-canvas.css" />
-    <style type="text/css">
-        .d-example .d-off-canvas {
-            max-width: 320px;
-            background-color: red;
-        }
-        .d-off-canvas-helper {
-            background-color: black;
-        }
-    </style>
 </head>
 <body>
 
 <div class="d-off-canvas-wrapper d-example">
-    <input type="checkbox" id="d-off-canvas-trigger">
-    <label for="d-off-canvas-trigger" class="d-off-canvas-trigger">
+    <input type="checkbox" id="my-trigger">
+    <label for="my-trigger" class="d-off-canvas-trigger">
         <span>Trigger</span>
     </label>
-    <label for="d-off-canvas-trigger" class="d-off-canvas-helper"></label>
-    <div class="d-off-canvas" data-comes-from="right">
-        Here goes your content.
+    <label for="my-trigger" class="d-off-canvas-helper"></label>
+    <div class="d-off-canvas" data-comes-from="left">
+        Here goes your content - with close button.
+        <!-- how to add a close button? here you go ;-) -->
+        <label for="my-trigger">
+            <span>close</span>
+        </label>
     </div>
 </div>
 

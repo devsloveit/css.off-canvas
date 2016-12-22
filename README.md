@@ -10,11 +10,23 @@ You can add `--save` as a parameter if you want to add the plugin into your `pac
 ### HTML
 Have a look at [codepen](https://codepen.io/devsloveit/pen/VmgEBO).
 
+#### data-comes-from
+We are using a data-attribute (e.g. `data-comes-from="right"`) for defining the direction.
+
 ### JavaScript
 We don't need JavaScript ;-)
 
-### Sass
-in work.
+### SCSS
 
-#### Options
-in work.
+#### Mixins
+`@include devsloveit-off-canvas-styles();`
+
+##### Options
+| Option  | Default | Description |
+|---|---|---|
+| $background-color | false | Defines the background-color of your container. |
+| $helper-background-color | false |  Defines the background-color of your closing-helper. |
+| $max-height | false | Should be defined for _top_ or _bottom_ uses. |
+| $max-width | false | Should be defined for _left_ or _right_ uses. |
+| $transition-time | $devsloveit-off-canvas-transition-time | Is defined in main settings. Can be overwritten by setting a new value to the variable. |
+| $transition-type | $devsloveit-off-canvas-transition-type | Is defined in main settings. Can be overwritten by setting a new value to the variable. |
