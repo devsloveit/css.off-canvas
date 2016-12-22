@@ -1,9 +1,3 @@
 @import "settings";
 @import "mixins";
 @import "core";
-
-@include devsloveit-off-canvas-styles(
-	$background-color: red,
-	$helper-background-color: black,
-	$max-width: 320px
-);
