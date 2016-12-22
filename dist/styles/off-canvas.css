@@ -67,14 +67,15 @@
 }
 
 .d-off-canvas[data-comes-from="top"] {
-  top: 0;
-  left: 0;
   right: 0;
+  bottom: auto;
+  left: 0;
   -webkit-transform: translate(0, -100%) translate3d(0, -100%, 0);
           transform: translate(0, -100%) translate3d(0, -100%, 0);
 }
 
 .d-off-canvas[data-comes-from="bottom"] {
+  top: auto;
   bottom: 0;
   left: 0;
   right: 0;
