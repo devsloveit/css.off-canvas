@@ -1,0 +1,74 @@
+@mixin devsloveit-off-canvas(
+	$background-color: false,
+	$max-height: false,
+	$max-width: false,
+	$transition-time: $devsloveit-off-canvas-transition-time,
+	$transition-type: $devsloveit-off-canvas-transition-type
+) {
+	.#{$devs-love-it} {
+		@if $max-height {
+			max: {
+				height: $max-height;
+			}
+		}
+		@if $max-width {
+			max: {
+				width: $max-width;
+			}
+		}
+		@if $background-color {
+			background: {
+				color: $background-color;
+			}
+		}
+		transition: transform $transition-time $transition-type, opacity $transition-time $transition-type;
+	}
+}
+
+
+@mixin devsloveit-off-canvas-wrapper(
+	$transition-time: $devsloveit-off-canvas-transition-time,
+	$transition-type: $devsloveit-off-canvas-transition-type
+) {
+	.#{$devs-love-it}-wrapper {
+		input[type="checkbox"] {
+			&:focus,
+			&:active {
+				~ .#{$devs-love-it} {
+					transition: transform $transition-time $transition-type, opacity $transition-time $transition-type;
+				}
+				~ .#{$devs-love-it}-helper {
+					transition: opacity $transition-time $transition-type, visibility $transition-time $transition-type;
+				}
+			}
+		}
+	}
+}
+
+@mixin devsloveit-off-canvas-helper(
+	$background-color: false,
+	$transition-time: $devsloveit-off-canvas-transition-time,
+	$transition-type: $devsloveit-off-canvas-transition-type
+) {
+	.#{$devs-love-it}-helper {
+		@if $background-color {
+			background: {
+				color: $background-color;
+			}
+		}
+		transition: opacity $transition-time $transition-type, visibility $transition-time $transition-type;
+	}
+}
+
+@mixin devsloveit-off-canvas-styles(
+	$background-color: false,
+	$helper-background-color: false,
+	$max-height: false,
+	$max-width: false,
+	$transition-time: $devsloveit-off-canvas-transition-time,
+	$transition-type: $devsloveit-off-canvas-transition-type
+) {
+	@include devsloveit-off-canvas($background-color, $helper-background-color, $max-height, $max-width, $transition-time, $transition-type);
+	@include devsloveit-off-canvas-wrapper($transition-time, $transition-type);
+	@include devsloveit-off-canvas-helper($helper-background-color, $transition-time, $transition-type);
+}
