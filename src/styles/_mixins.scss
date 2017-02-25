@@ -1,3 +1,69 @@
+@mixin devsloveit-off-canvas-core {
+	position: fixed;
+	z: {
+		index: $devsloveit-off-canvas-index;
+	}
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	transform: translate(-100%, 0) translate3d(-100%, 0, 0);
+	&[data-comes-from="top"] {
+		bottom: auto;
+		transform: translate(0, -100%) translate3d(0, -100%, 0);
+	}
+	&[data-comes-from="bottom"] {
+		top: auto;
+		right: 0;
+		transform: translate(0, 100%) translate3d(0, 100%, 0);
+	}
+	&[data-comes-from="right"] {
+		right: 0;
+		left: auto;
+		transform: translate(100%, 0) translate3d(100%, 0, 0);
+	}
+	&-wrapper {
+		display: inline-block;
+		input[type="checkbox"] {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 0;
+			width: 0;
+			opacity: 0;
+			&:checked {
+				~ .#{$devs-love-it} {
+					overflow: {
+						y: auto;
+						x: hidden;
+					}
+					opacity: 1;
+					transform: translate(0, 0) translate3d(0, 0, 0);
+				}
+				~ .#{$devs-love-it}-helper {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+	&-helper {
+		position: fixed;
+		z: {
+			index: $devsloveit-off-canvas-index - 1;
+		}
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+
 @mixin devsloveit-off-canvas(
 	$background-color: false,
 	$max-height: false,
@@ -6,6 +72,7 @@
 	$transition-type: $devsloveit-off-canvas-transition-type
 ) {
 	.#{$devs-love-it} {
+		@include devsloveit-off-canvas-core();
 		@if $max-height {
 			max: {
 				height: $max-height;
@@ -47,6 +114,7 @@
 	}
 }
 
+
 @mixin devsloveit-off-canvas-helper(
 	$background-color: false,
 	$transition-time: $devsloveit-off-canvas-transition-time,
@@ -62,6 +130,7 @@
 		@content;
 	}
 }
+
 
 @mixin devsloveit-off-canvas-styles(
 	$background-color: false,
